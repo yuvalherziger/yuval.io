@@ -13,59 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70cb4d0e-872e-4475-a935-b0057a452865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/herziger.net.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/cmd/api/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bio/cmd/bio/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bio/config/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bio/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bio/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/e2e/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/api.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/help.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="70cb4d0e-872e-4475-a935-b0057a452865" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
