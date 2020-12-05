@@ -75,29 +75,29 @@ experience:
         - Worked with MySQL, AWS DynamoDb, and MongoDB databases
         - Studied and consumed from social media REST API's, often more than the docs could offer
   - companyName: Incuda GmbH
-      companyWebsite: https://www.incuda.com
-      location: Düsseldorf, NRW, Germany
-      roles:
-        - name: Software Engineer
-          startDate: Aug 2014
-          endDate: Feb 2016
-          responsibilities:
-            - Supported data integration projects for e-commerice clients using Pentaho Data Integration (PDI)
-            - Specialized in consumption of web analytics and marketing data
-            - Integrated a variety of data sources (API's, relational databases, NoSQL databases)
-            - Targeted ETL jobs to distributed analytics databases using Java and PDI
-            - Developed custom PDI plugins with Java using the PDI API’s for various types of ETL processes
-            - Specialized in the deployment and setup of Snowplow, a robust open-source web analytics platform
+    companyWebsite: https://www.incuda.com
+    location: Düsseldorf, NRW, Germany
+    roles:
+      - name: Software Engineer
+        startDate: Aug 2014
+        endDate: Feb 2016
+        responsibilities:
+          - Supported data integration projects for e-commerice clients using Pentaho Data Integration (PDI)
+          - Specialized in consumption of web analytics and marketing data
+          - Integrated a variety of data sources (API's, relational databases, NoSQL databases)
+          - Targeted ETL jobs to distributed analytics databases using Java and PDI
+          - Developed custom PDI plugins with Java using the PDI API’s for various types of ETL processes
+          - Specialized in the deployment and setup of Snowplow, a robust open-source web analytics platform
   - companyName: TVMania Ltd.
-      companyWebsite: ""
-      location: Herzliya, Israel
-      roles:
-        - name: Software Engineer
-          startDate: Jun 2013
-          endDate: Jul 2014
-          responsibilities:
-            - Developed and maintained a supply-chain management support system using classic ASP, C#.NET, and MSSQL
-            - Prototyped a BI architecture using SSIS, SSRS, and SSAS
+    companyWebsite: ""
+    location: Herzliya, Israel
+    roles:
+      - name: Software Engineer
+        startDate: Jun 2013
+        endDate: Jul 2014
+        responsibilities:
+          - Developed and maintained a supply-chain management support system using classic ASP, C#.NET, and MSSQL
+          - Prototyped a BI architecture using SSIS, SSRS, and SSAS
 education:
   - institute: Ruppin Academic Center
     degree: B.Sc. Industrial Engineering & Management
