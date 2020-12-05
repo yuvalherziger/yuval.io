@@ -64,6 +64,6 @@ COPY ${CONFIG_PATH}/${CONFIG_FILE} /etc/config/${CONFIG_FILE}
 
 USER 10000
 WORKDIR /var/lib/api
-EXPOSE 8090
+EXPOSE 80
 
 CMD ["/usr/bin/api"]

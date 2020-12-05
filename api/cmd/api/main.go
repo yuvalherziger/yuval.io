@@ -61,7 +61,7 @@ func main() {
     fs := http.FileServer(http.Dir("/opt/bio/app/static/"))
     http.Handle("/", fs)
     http.HandleFunc("/api/v1beta1/cmd", executeCommand)
-    err := http.ListenAndServe(":8090", nil)
+    err := http.ListenAndServe(":80", nil)
     if err != nil {
         log.Fatal(err)
     }
