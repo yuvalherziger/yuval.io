@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70cb4d0e-872e-4475-a935-b0057a452865" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/herziger.net.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/cmd/api/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bio/cmd/bio/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bio/config/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bio/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bio/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/api.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/help.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1l3zZqOpf4mHI5CrPh3lIEcFs53" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/ui/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ui/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/biocli" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/api/cmd" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1080" y="545" key="#Go_Modules" timestamp="1606957844952">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="1080" y="545" key="#Go_Modules/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1606957844952" />
+    <state x="648" y="327" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607108772114">
+      <screen x="0" y="25" width="1920" height="1125" />
+    </state>
+    <state x="648" y="327" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1920.1125@0.25.1920.1125" timestamp="1607108772114" />
+    <state x="789" y="343" key="SettingsEditor" timestamp="1606957986895">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="789" y="343" key="SettingsEditor/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1606957986895" />
+    <state x="1539" y="322" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607055133049">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="1539" y="322" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607055133049" />
+    <state x="1081" y="625" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606954978324">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="1081" y="625" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1606954978324" />
+    <state x="1621" y="462" width="597" height="490" key="find.popup" timestamp="1607051381141">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="1621" y="462" width="597" height="490" key="find.popup/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607051381141" />
+    <state x="945" y="337" width="670" height="676" key="search.everywhere.popup" timestamp="1607116077916">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="945" y="337" width="670" height="676" key="search.everywhere.popup/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607116077916" />
+  </component>
+</project>
