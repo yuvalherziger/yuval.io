@@ -44,21 +44,21 @@ type Profile struct {
 
 type Skill struct {
     Name        string `mapstructure:"name"`
-    Proficiency int  `mapstructure:"proficiency"`
+    Proficiency int    `mapstructure:"proficiency"`
 }
 
 type Role struct {
-    Name                string `mapstructure:"name"`
-    StartDate           string `mapstructure:"startDate"`
-    EndDate             string `mapstructure:"endDate"`
-    Responsibilities    []string `mapstructure:"responsibilities"`
+    Name             string   `mapstructure:"name"`
+    StartDate        string   `mapstructure:"startDate"`
+    EndDate          string   `mapstructure:"endDate"`
+    Responsibilities []string `mapstructure:"responsibilities"`
 }
 
 type Company struct {
-    CompanyName     string `mapstructure:"companyName"`
-    CompanyWebsite  string `mapstructure:"companyWebsite"`
-    Location        string `mapstructure:"location"`
-    Roles           []Role `mapstructure:"roles"`
+    CompanyName    string `mapstructure:"companyName"`
+    CompanyWebsite string `mapstructure:"companyWebsite"`
+    Location       string `mapstructure:"location"`
+    Roles          []Role `mapstructure:"roles"`
 }
 
 type Certification struct {
@@ -99,7 +99,7 @@ func initConfig() {
 }
 
 func getUnitSize(vWidth int, cols int, divider int) int {
-    padding := (cols - 1) * 3 + 4
+    padding := (cols-1)*3 + 4
     return (vWidth - padding) / divider
 }
 
@@ -152,7 +152,9 @@ func experience(cmd *cobra.Command, args []string) {
             }
             l := list.NewWriter()
             l.SetStyle(list.StyleBulletTriangle)
-            for _, rs := range r.Responsibilities { l.AppendItem(rs) }
+            for _, rs := range r.Responsibilities {
+                l.AppendItem(rs)
+            }
 
             t.AppendRows([]table.Row{
                 {
@@ -162,7 +164,7 @@ func experience(cmd *cobra.Command, args []string) {
                 },
             })
             prevC = c
-            if nRoles > 0 && (tRoles + 1) >= nRoles {
+            if nRoles > 0 && (tRoles+1) >= nRoles {
                 t.Render()
                 return
             }
@@ -211,14 +213,18 @@ func about(cmd *cobra.Command, args []string) {
     if err != nil {
         panic(err)
     }
-    for _, p := range profiles { pList.AppendItem(fmt.Sprintf("%s: %s", p.Name, p.Url)) }
+    for _, p := range profiles {
+        pList.AppendItem(fmt.Sprintf("%s: %s", p.Name, p.Url))
+    }
     t.AppendRows([]table.Row{{
         "Online Profiles", pList.Render(),
     }})
 
     lList := list.NewWriter()
     lList.SetStyle(list.StyleBulletTriangle)
-    for _, lang := range viper.GetStringSlice("about.languages") { lList.AppendItem(lang) }
+    for _, lang := range viper.GetStringSlice("about.languages") {
+        lList.AppendItem(lang)
+    }
     t.AppendRows([]table.Row{{
         "Languages", lList.Render(),
     }})
@@ -232,8 +238,8 @@ func picture(cmd *cobra.Command, args []string) {
 func buildSkillProgress(p int) string {
     return fmt.Sprintf(
         "%s%s %d/%d",
-        strings.Repeat("█", p * 2),
-        strings.Repeat("░", (10 - p) * 2),
+        strings.Repeat("█", p*2),
+        strings.Repeat("░", (10-p)*2),
         p,
         10,
     )
@@ -361,7 +367,7 @@ func skills(cmd *cobra.Command, args []string) {
     if err != nil {
         panic(err)
     }
-    sort.SliceStable(skills, func (i, j int) bool {
+    sort.SliceStable(skills, func(i, j int) bool {
         return skills[i].Proficiency > skills[j].Proficiency
     })
     t := table.NewWriter()
@@ -404,10 +410,10 @@ func init() {
     _ = fs.MarkHidden("view-width")
 
     expCmd := &cobra.Command{
-        Use:   "experience",
+        Use:     "experience",
         Aliases: []string{"e"},
-        Short: "Show my work experience",
-        Run:   experience,
+        Short:   "Show my work experience",
+        Run:     experience,
     }
     expFlags := expCmd.PersistentFlags()
     expFlags.Int("roles", -1, "The # of roles to retrieve, in descending chronological order")
@@ -416,10 +422,10 @@ func init() {
     _ = expFlags.MarkHidden("view-width")
 
     aboutCmd := &cobra.Command{
-        Use:   "about",
+        Use:     "about",
         Aliases: []string{"a"},
-        Short: "Show information about me",
-        Run:   about,
+        Short:   "Show information about me",
+        Run:     about,
     }
     aboutFlags := aboutCmd.PersistentFlags()
     aboutFlags.Bool("pretty", false, "Return a colorful table")
@@ -427,16 +433,20 @@ func init() {
     _ = aboutFlags.MarkHidden("view-width")
 
     picCmd := &cobra.Command{
-        Use:   "picture",
+        Use:     "picture",
         Aliases: []string{"p", "pic"},
-        Short: "Show my picture",
-        Run:   picture,
+        Short:   "Show my picture",
+        Run:     picture,
     }
+    picFlags := picCmd.PersistentFlags()
+    picFlags.Int("view-width", 256, "View width")
+    _ = picFlags.MarkHidden("view-width")
+
     sklCmd := &cobra.Command{
-        Use:   "skills",
+        Use:     "skills",
         Aliases: []string{"s"},
-        Short: "Show my self-proclaimed skills ;-)",
-        Run:   skills,
+        Short:   "Show my self-proclaimed skills ;-)",
+        Run:     skills,
     }
     sklFlags := sklCmd.PersistentFlags()
     sklFlags.Bool("pretty", false, "Return a colorful table")
@@ -444,10 +454,10 @@ func init() {
     _ = sklFlags.MarkHidden("view-width")
 
     crtCmd := &cobra.Command{
-        Use:   "certifications",
+        Use:     "certifications",
         Aliases: []string{"c"},
-        Short: "Show my certifications",
-        Run:   certifications,
+        Short:   "Show my certifications",
+        Run:     certifications,
     }
     crtFlags := crtCmd.PersistentFlags()
     crtFlags.Bool("pretty", false, "Return a colorful table")
@@ -455,10 +465,10 @@ func init() {
     _ = crtFlags.MarkHidden("view-width")
 
     eduCmd := &cobra.Command{
-        Use:   "education",
+        Use:     "education",
         Aliases: []string{"ed"},
-        Short: "Show my education",
-        Run:   education,
+        Short:   "Show my education",
+        Run:     education,
     }
     eduFlags := eduCmd.PersistentFlags()
     eduFlags.Bool("pretty", false, "Return a colorful table")
@@ -473,18 +483,17 @@ func init() {
     }
 
     openCmd := &cobra.Command{
-        Use:        "open",
-        Aliases:    []string{"o"},
-        Short:      "Open a profile page in a new tab",
-        Run:        openProfile,
-        ValidArgs:  pNames,
-        Args:       cobra.ExactValidArgs(1),
-        Example:    fmt.Sprintf("bio open [ %s ]", strings.Join(pNames[:], " | ")),
+        Use:       "open",
+        Aliases:   []string{"o"},
+        Short:     "Open a profile page in a new tab",
+        Run:       openProfile,
+        ValidArgs: pNames,
+        Args:      cobra.ExactValidArgs(1),
+        Example:   fmt.Sprintf("bio open [ %s ]", strings.Join(pNames[:], " | ")),
     }
     openFlags := openCmd.PersistentFlags()
     openFlags.Int("view-width", 256, "View width")
     _ = openFlags.MarkHidden("view-width")
-
 
     rootCmd.AddCommand(expCmd)
     rootCmd.AddCommand(picCmd)

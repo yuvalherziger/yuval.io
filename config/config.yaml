@@ -4,12 +4,11 @@ about:
   nickname: Yuvi
   intro: |
     I'm A software engineer with over 8 years of diverse experience in a variety of fields and engineering paradigms;
-    I believe in leading by example and constant learning; a certified AWS Solutions Architect Associate (SAA-C01) and
-    Kubernetes Application Developer (CKAD).
-    Off the grid, I'm a proud father, a loving partner to a psychology professor at the Technion, an amateur landscape
+    I believe in leading by example and constant learning; a certified AWS Solutions Architect Associate (SAA-C01).
+    Off the grid, I'm a proud father, a loving partner to an academic researcher, an amateur landscape
     and portrait photographer, and an okay guitar player.
-    Born and raised in Israel, I just came back after having spent 7 years abroad. I lived in Cologne,
-    Germany for 4 years and then moved to Columbus, Ohio, USA for another 3 years as an ex-pat.
+    Born and raised in Israel, I've been an ex-pat for the past 7 years. I currently live in Columbus, Ohio. I've moved
+    to Columbus after having lived for 4 years in Cologne (Köln), Germany.
   contact:
     emailAddress: yuvalhrz@gmail.com
   profiles:
@@ -23,8 +22,8 @@ about:
       url: https://www.facebook.com/herziger
   languages:
     - Hebrew  - native
-    - English - proficient
-    - German  - business (B1)
+    - English - fluent
+    - German  - business proficiency (B2)
     - Spanish - basic
 certifications:
   - name: AWS Solutions Architect Associate (SAA-C01)
@@ -37,22 +36,21 @@ experience:
     roles:
     - name: Lead Software Engineer
       startDate: May 2020
-      endDate: Jun 2021
+      endDate: Present
       responsibilities:
-        - Oversaw a team of 2 software engineers
-        - Prioritize, plan, and execute ongoing development tasks across >= 10 codebases in an agile team
-        - Provided deliverables to Immuta customers in the form of custom plugins and integrations
-        - Supported deployments on-premises and private cloud environments
+        - Oversee the Applications and Integrations team
+        - Prioritize, plan, and execute ongoing development tasks across several codebases in an agile team
+        - Provide deliverables to Immuta customers in the form of custom plugins and integrations
     - name: Software Engineer
       startDate: Aug 2018
       endDate: May 2020
       responsibilities:
-        - Member of Immuta’s Applied Engineering team,
+        - Member of Immuta's Applied Engineering team
         - Designed and developed an identity manager that supported SAML 2.0 & OAuth 2.0/OIDC
         - Led technical POC’s with enterprise customers (some reaching $1m in ACV)
         - Assisted with HA and FT Kubernetes deployments on various infrastructures, primarily AWS and Azure
         - Developed and maintained various microservices
-        - Provided assistance in various customer POC’s
+        - Provided assistance in various customer POC's
         - Worked on a variety of distributed data computation systems such as EMR, Snowflake, and Databricks
         - Developed front-end components using Angular v{6, 7, 10}
   - companyName: Quintly GmbH
@@ -60,23 +58,46 @@ experience:
     location: Cologne, NRW, Germany
     roles:
     - name: Scrum Master
-      startDate: Aug 2018
-      endDate: May 2020
+      startDate: Jan 2017
+      endDate: Feb 2018
       responsibilities:
         - Led a team of 3 software engineers
-        - |
-          Estimated, planned, coordinated, and executed implementation of new features
+        - Estimated, planned, coordinated, and executed implementation of new features
     - name: Software Engineer
-      startDate: Aug 2018
-      endDate: May 2020
+      startDate: Feb 2016
+      endDate: Feb 2018
       responsibilities:
         - Implemented new features and maintain Quintly’s social media analytics product in a Scrum team
         - Developed back-end features using PHP, with utmost attention to design, architecture, and performance
         - Strong Emphasis on Domain-Driven Design (DDD) patterns
         - Developed front-end components using ReactJS and Redux
         - Experimented with Test-Driven Development (TDD) and wrote comprehensive unit and integration tests
-        - Worked with MySQL, AWS DynamoDb and MongoDB databases
+        - Worked with MySQL, AWS DynamoDb, and MongoDB databases
         - Studied and consumed from social media REST API's, often more than the docs could offer
+  - companyName: Incuda GmbH
+      companyWebsite: https://www.incuda.com
+      location: Düsseldorf, NRW, Germany
+      roles:
+        - name: Software Engineer
+          startDate: Aug 2014
+          endDate: Feb 2016
+          responsibilities:
+            - Supported data integration projects for e-commerice clients using Pentaho Data Integration (PDI)
+            - Specialized in consumption of web analytics and marketing data
+            - Integrated a variety of data sources (API's, relational databases, NoSQL databases)
+            - Targeted ETL jobs to distributed analytics databases using Java and PDI
+            - Developed custom PDI plugins with Java using the PDI API’s for various types of ETL processes
+            - Specialized in the deployment and setup of Snowplow, a robust open-source web analytics platform
+  - companyName: TVMania Ltd.
+      companyWebsite: ""
+      location: Herzliya, Israel
+      roles:
+        - name: Software Engineer
+          startDate: Jun 2013
+          endDate: Jul 2014
+          responsibilities:
+            - Developed and maintained a supply-chain management support system using classic ASP, C#.NET, and MSSQL
+            - Prototyped a BI architecture using SSIS, SSRS, and SSAS
 education:
   - institute: Ruppin Academic Center
     degree: B.Sc. Industrial Engineering & Management
@@ -94,25 +115,36 @@ skills:
     proficiency: 9
   - name: Go
     proficiency: 7
+  - name: Java
+    proficiency: 5
+  - name: Bash/Linux
+    proficiency: 6
+  - name: Bash/Linux
+    proficiency: 6
   - name: Node.js (JS + TS)
     proficiency: 8
   - name: Docker
     proficiency: 9
+  - name: Relational DBs
+    proficiency: 9
+  - name: NoSQL
+    proficiency: 6
   - name: Kubernetes
     proficiency: 8
   - name: Terraform
     proficiency: 4
-  - name: AWS
+  - name: AWS Infrastructure
     proficiency: 7
-  - name: Azure
+  - name: Azure Infrastructure
     proficiency: 5
   - name: PHP
     proficiency: 6
+  - name: React.js
+    proficiency: 4
 picture: |
 
-  This is me:
-                     .........   .................        .
-                   ..................'''''''............
+  This is ASCII-me:
+                         ............'''''''....
               ..  ...'..'''.......'',,;;;::;;,,'''........
               ......,;,',;;,,,,,;;;;cllllooooolll:;;;,'''...
           .....'',,,:cllllooooooooodxxxxxxxxxxdddolc:;;;;,'....
@@ -164,7 +196,5 @@ picture: |
        .lxxddxxxxxdl:::cclooodxxxxkkkkkxkkkkOkkkOkkkkxxxxxdolcccclclooddl,.
         ,dxkxxxddolc:ccllodddxxxxxkkOkOOOOOOOOOOOOOOkkkkkkxxdlcclcccccc:'.
         .,oxxdooolccclooddxkkkkxxkkOOOOOOOOOOO0000OOOOOOOkkkdocccc::::,.
-          .:ddoolllclodddxxkOOOkkkkOOOOOOOOOO00000OOOOOOOkkxdoc::;;;,..
-           .':clooooodxxxxxkOOOOOOOOOOOOOOOOOO000OOOOOkkxxxdolcc:;,..
-             ..;clllloooddxkkkkkkOOOOOOOOOOOOOOOOOOOkxoodddolll:,..
-                .';:::;:lloddxxkkkOkkkkkkkOOOOOOOOOOkxdddxdoc,..
+
+
