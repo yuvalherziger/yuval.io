@@ -14,6 +14,7 @@ export class TerminalComponent implements AfterViewInit {
 
   currentValue: string;
   history: string[] = [];
+  maxHistorySize = 5;
   historyCursor = -1;
   fitAddon: FitAddon;
   constructor(private api: ApiService) { }
@@ -25,11 +26,11 @@ export class TerminalComponent implements AfterViewInit {
     this.terminal.underlying.loadAddon(this.fitAddon);
     this.terminal.underlying.setOption('cursorBlink', true);
     this.terminal.underlying.setOption('convertEol', true);
-    this.terminal.underlying.setOption('fontWeight', '700');
+    this.terminal.underlying.setOption('fontWeight', '200');
     this.terminal.underlying.setOption('cursorStyle', 'block');
     this.terminal.underlying.setOption('theme', {
       background: '#111',
-      cursor: '#d1d1d1',
+      cursor: '#00b3b3',
       foreground: '#00b3b3',
     });
     this.api.executeCommand('bio --help', this.terminal.underlying.cols).subscribe(resp => {
@@ -38,11 +39,11 @@ export class TerminalComponent implements AfterViewInit {
       this.initTerminal();
     }, err => {
       this.initTerminal();
-      console.log(err);
     });
   }
 
   initTerminal(): void {
+    this.history = JSON.parse(localStorage.getItem('historyCache') || '[]');
     this.currentValue = '';
     this.terminal.write('➜ ');
 
@@ -63,16 +64,30 @@ export class TerminalComponent implements AfterViewInit {
         ev.preventDefault();
       } else if (ev.key === 'ArrowDown' ) {
         ev.preventDefault();
+        this.clearCurrentPrompt();
+        this.historyCursor = Math.max(this.historyCursor - 1, -1);
+        if (this.historyCursor >= 0) {
+          const v = this.history[this.historyCursor];
+          this.currentValue = v;
+          this.terminal.write(v);
+        }
       } else if (ev.key === 'ArrowUp') {
         ev.preventDefault();
-        if (this.historyCursor >= 0) {
-          // implement history
-        }
+        this.clearCurrentPrompt();
+        this.historyCursor = Math.min(this.historyCursor + 1, this.history.length - 1);
+        const v = this.history[this.historyCursor];
+        this.currentValue = v;
+        this.terminal.write(v);
       } else if (printable) {
         this.terminal.write(e.key);
         this.currentValue += `${e.key}`;
       }
     });
+  }
+
+  clearCurrentPrompt(): void {
+    this.terminal.write('\b \b'.repeat(this.currentValue.length));
+    this.currentValue = '';
   }
 
   lineBreak(clear = false, prefix = true): void {
@@ -85,7 +100,11 @@ export class TerminalComponent implements AfterViewInit {
 
   execute(): void {
     this.currentValue = this.currentValue.trim();
-    this.history.push(this.currentValue);
+    if (this.currentValue !== '') {
+      this.history.unshift(this.currentValue);
+      this.history = this.history.slice(0, this.maxHistorySize);
+      localStorage.setItem('historyCache', JSON.stringify(this.history));
+    }
     this.historyCursor = -1;
     if (this.currentValue === 'clear') {
       this.terminal.underlying.reset();
