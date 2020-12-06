@@ -68,7 +68,7 @@ experience:
       endDate: Feb 2018
       responsibilities:
         - Implemented new features and maintain Quintly’s social media analytics product in a Scrum team
-        - Developed back-end features using PHP, with utmost attention to design, architecture, and performance
+        - Developed back-end features using PHP
         - Strong Emphasis on Domain-Driven Design (DDD) patterns
         - Developed front-end components using ReactJS and Redux
         - Experimented with Test-Driven Development (TDD) and wrote comprehensive unit and integration tests
@@ -119,8 +119,6 @@ skills:
     proficiency: 5
   - name: Bash/Linux
     proficiency: 6
-  - name: Bash/Linux
-    proficiency: 6
   - name: Node.js (JS + TS)
     proficiency: 8
   - name: Docker
@@ -140,7 +138,7 @@ skills:
   - name: PHP
     proficiency: 6
   - name: React.js
-    proficiency: 4
+    proficiency: 5
 picture: |
 
   This is ASCII-me:
@@ -196,5 +194,3 @@ picture: |
        .lxxddxxxxxdl:::cclooodxxxxkkkkkxkkkkOkkkOkkkkxxxxxdolcccclclooddl,.
         ,dxkxxxddolc:ccllodddxxxxxkkOkOOOOOOOOOOOOOOkkkkkkxxdlcclcccccc:'.
         .,oxxdooolccclooddxkkkkxxkkOOOOOOOOOOO0000OOOOOOOkkkdocccc::::,.
-
-

@@ -31,10 +31,11 @@ const (
 ┃   ┃╭━╮┃┃┃┃┃╱┃┃  ┃┃╱╭┫┃╱╭╮┃┃    ┃
 ┃   ┃╰━╯┣┫┣┫╰━╯┃  ┃╰━╯┃╰━╯┣┫┣╮   ┃ 
 ┃   ╰━━━┻━━┻━━━╯  ╰━━━┻━━━┻━━╯   ┃
-┃                                ┃
-┃         Your interface         ┃
-┃     to Yuval Herziger's CV     ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
+┃              BY YUVAL HERZIGER ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Your interface to my CV; read the manual below to find out more:
+`
 )
 
 type Profile struct {

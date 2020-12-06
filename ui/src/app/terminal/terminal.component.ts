@@ -25,10 +25,12 @@ export class TerminalComponent implements AfterViewInit {
     this.terminal.underlying.loadAddon(this.fitAddon);
     this.terminal.underlying.setOption('cursorBlink', true);
     this.terminal.underlying.setOption('convertEol', true);
+    this.terminal.underlying.setOption('fontWeight', '700');
+    this.terminal.underlying.setOption('cursorStyle', 'block');
     this.terminal.underlying.setOption('theme', {
-      background: '#000000',
-      cursor: '#99FFFF',
-      foreground: '#99FFFF',
+      background: '#111',
+      cursor: '#d1d1d1',
+      foreground: '#00b3b3',
     });
     this.api.executeCommand('bio --help', this.terminal.underlying.cols).subscribe(resp => {
       this.terminal.write(`\r\n${resp.output}\n`);
@@ -42,7 +44,7 @@ export class TerminalComponent implements AfterViewInit {
 
   initTerminal(): void {
     this.currentValue = '';
-    this.terminal.write('$ ');
+    this.terminal.write('➜ ');
 
     this.terminal.keyEventInput.subscribe(e => {
 
@@ -64,7 +66,7 @@ export class TerminalComponent implements AfterViewInit {
       } else if (ev.key === 'ArrowUp') {
         ev.preventDefault();
         if (this.historyCursor >= 0) {
-          //this.currentValue;
+          // implement history
         }
       } else if (printable) {
         this.terminal.write(e.key);
@@ -74,15 +76,11 @@ export class TerminalComponent implements AfterViewInit {
   }
 
   lineBreak(clear = false, prefix = true): void {
-    const linePref = prefix ? '$ ' : '';
+    const linePref = prefix ? '➜ ' : '';
     if (clear) {
       this.currentValue = '';
     }
     this.terminal.write(`\r\n${linePref}`);
-  }
-
-  validateCommand(): boolean {
-    return this.currentValue.startsWith('clear') || this.currentValue.startsWith('bio ') || this.currentValue === 'bio';
   }
 
   execute(): void {
@@ -91,7 +89,7 @@ export class TerminalComponent implements AfterViewInit {
     this.historyCursor = -1;
     if (this.currentValue === 'clear') {
       this.terminal.underlying.reset();
-      this.terminal.write('$ ');
+      this.terminal.write('➜ ');
       this.currentValue = '';
     } else if (!this.currentValue.trim()) {
       this.lineBreak(true);
