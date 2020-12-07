@@ -36,6 +36,30 @@ const (
 
 Your interface to my CV; read the manual below to find out more:
 `
+    arch                string = `
+┏━━━━━┓           
+┃ You ┃
+┗━━┳━━┛          ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃             ┃ EC2                    ┃┐
+   ┃             ┃ ╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮ ┃┆
+   ┃   ┏━━━━━┓   ┃ ┆  ╭┄┄┄┄┄┄╮   ╭┄┄┄┄┄╮┆ ┃┆
+   ┗━━▶┃ ELB ┣━━━╋━┼━▶┆  Go  ┆   ┆ Go  ┆┆ ┃┆
+       ┗━━━━━┛   ┃ ┆  ┆ HTTP ┆━━▶┆Cobra┆┆ ┃┆
+                 ┃ ┆  ┆Server┆   ┆ CLI ┆┆ ┃┆
+                 ┃ ┆  ╰┄┄┄┄┄┄╯   ╰┄┄┄┄┄╯┆ ┃┆
+                 ┃ ┆   Docker container ┆ ┃┆
+                 ┃ ╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯ ┃┆
+                 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛┆
+                  └┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┘
+
+How does bio-cli work? Well, although you're not interacting with it directly, bio-cli is real CLI.
+You're using an Angular 10 build that's equipped with xterm.js. It relays your commands to a go-based
+HTTP server written in go, which validates your inputs and eventually invokes bio-cli.
+The output you get is the exact stdout/stderr bio-cli returns.
+
+Under the covers, it boils down to a simple Docker image with an Angular 10 build and two go program
+binaries - one for the server and another for the CLI.
+`
 )
 
 type Profile struct {
@@ -234,6 +258,10 @@ func about(cmd *cobra.Command, args []string) {
 
 func picture(cmd *cobra.Command, args []string) {
     fmt.Printf(viper.GetString("picture"))
+}
+
+func architecture(cmd *cobra.Command, args []string) {
+    fmt.Printf(arch)
 }
 
 func buildSkillProgress(p int) string {
@@ -443,6 +471,16 @@ func init() {
     picFlags.Int("view-width", 256, "View width")
     _ = picFlags.MarkHidden("view-width")
 
+    archCmd := &cobra.Command{
+        Use:     "about-tool",
+        Aliases: []string{"st"},
+        Short:   "Show information on how I've built this tool",
+        Run:     architecture,
+    }
+    archFlags := archCmd.PersistentFlags()
+    archFlags.Int("view-width", 256, "View width")
+    _ = archFlags.MarkHidden("view-width")
+
     sklCmd := &cobra.Command{
         Use:     "skills",
         Aliases: []string{"s"},
@@ -503,6 +541,7 @@ func init() {
     rootCmd.AddCommand(sklCmd)
     rootCmd.AddCommand(eduCmd)
     rootCmd.AddCommand(openCmd)
+    rootCmd.AddCommand(archCmd)
 }
 
 func main() {
