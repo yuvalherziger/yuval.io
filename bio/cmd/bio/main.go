@@ -53,12 +53,14 @@ Your interface to my CV; read the manual below to find out more:
                   └┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┘
 
 How does bio-cli work? Well, although you're not interacting with it directly, bio-cli is a real CLI.
-You're using an Angular 10 build that's equipped with xterm.js. It relays your commands to a go-based
+You're using an Angular 10 build that's equipped with xterm.js. It relays your commands to an
 HTTP server written in go, which validates your inputs and eventually invokes bio-cli.
-The output you get is the exact stdout/stderr bio-cli returns.
+The output you get is the stdout/stderr that bio-cli returns.
 
 Under the covers, it boils down to a simple Docker image with an Angular 10 build and two go program
-binaries - one for the server and another for the CLI.
+binaries - one for the server and another for the CLI. As for the CV itself, it's just a YAML file, because
+who doesn't want their CV defined in YAML? ;-) For this reason, this project is pretty much ready to be
+open-sourced.
 `
 )
 
