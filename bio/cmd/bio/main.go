@@ -52,7 +52,7 @@ Your interface to my CV; read the manual below to find out more:
                  ┗━━━━━━━━━━━━━━━━━━━━━━━━┛┆
                   └┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┘
 
-How does bio-cli work? Well, although you're not interacting with it directly, bio-cli is real CLI.
+How does bio-cli work? Well, although you're not interacting with it directly, bio-cli is a real CLI.
 You're using an Angular 10 build that's equipped with xterm.js. It relays your commands to a go-based
 HTTP server written in go, which validates your inputs and eventually invokes bio-cli.
 The output you get is the exact stdout/stderr bio-cli returns.
