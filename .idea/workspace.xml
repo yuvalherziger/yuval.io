@@ -15,7 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="70cb4d0e-872e-4475-a935-b0057a452865" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bio/cmd/bio/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bio/cmd/bio/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/terminal/terminal.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,9 +108,9 @@
       <screen x="-2560" y="25" width="2560" height="1415" />
     </state>
     <state x="-1595" y="259" width="1595" height="932" key="find.popup/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607172962916" />
-    <state x="945" y="337" width="670" height="158" key="search.everywhere.popup" timestamp="1607303275578">
+    <state x="945" y="337" width="670" height="158" key="search.everywhere.popup" timestamp="1607307187499">
       <screen x="0" y="25" width="2560" height="1365" />
     </state>
-    <state x="945" y="337" width="670" height="158" key="search.everywhere.popup/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607303275578" />
+    <state x="945" y="337" width="670" height="158" key="search.everywhere.popup/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607307187499" />
   </component>
 </project>

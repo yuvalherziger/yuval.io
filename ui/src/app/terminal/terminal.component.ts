@@ -17,6 +17,7 @@ export class TerminalComponent implements AfterViewInit {
   maxHistorySize = 5;
   historyCursor = -1;
   fitAddon: FitAddon;
+  ignore = ['ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'];
   constructor(private api: ApiService) { }
 
   ngAfterViewInit(): void {
@@ -60,7 +61,7 @@ export class TerminalComponent implements AfterViewInit {
         if (this.terminal.underlying.buffer.active.cursorX > 2) {
           this.terminal.write('\b \b');
         }
-      } else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowRight') {
+      } else if (this.ignore.indexOf(ev.key) >= 0) {
         ev.preventDefault();
       } else if (ev.key === 'ArrowDown' ) {
         ev.preventDefault();
