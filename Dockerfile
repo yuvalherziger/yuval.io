@@ -4,7 +4,7 @@ ARG ALPINE_VERSION=3.12
 FROM golang:${GO_VERSION}-alpine${ALPINE_VERSION} as go-base
 RUN apk add --no-cache git build-base
 
-FROM node:12 as node-base
+FROM node:12-alpine as node-base
 
 COPY ui/ /ui/
 WORKDIR /ui

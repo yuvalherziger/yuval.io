@@ -12,12 +12,16 @@ import { WebLinksAddon } from 'xterm-addon-web-links';
 export class TerminalComponent implements AfterViewInit {
   @ViewChild('term', { static: true }) terminal: NgTerminal;
 
-  currentValue: string;
+  currentValue = '';
   history: string[] = [];
-  maxHistorySize = 5;
+  maxHistorySize = 50;
   historyCursor = -1;
   fitAddon: FitAddon;
-  ignore = ['ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'];
+  autocompleteVocabulary = [
+    'bio', 'about', 'about-tool', 'certifications', 'education', 'experience', 'help', 'open', 'picture', 'skills',
+    '--pretty', '--roles', '--help',
+  ];
+  ignore = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
   constructor(private api: ApiService) { }
 
   ngAfterViewInit(): void {
@@ -61,6 +65,22 @@ export class TerminalComponent implements AfterViewInit {
         if (this.terminal.underlying.buffer.active.cursorX > 2) {
           this.terminal.write('\b \b');
         }
+      } else if (ev.key === 'Tab') {
+        ev.preventDefault();
+        const parts = this.currentValue.split(' ');
+        const prefix = parts[parts.length - 1];
+        if (this.currentValue.trim()) {
+          for (const word of this.autocompleteVocabulary) {
+            if (word.startsWith(prefix)) {
+              const suffix = word.slice(prefix.length, word.length);
+              this.currentValue = `${this.currentValue}${suffix}`;
+              this.terminal.write(suffix);
+              break;
+            }
+          }
+        }
+
+
       } else if (this.ignore.indexOf(ev.key) >= 0) {
         ev.preventDefault();
       } else if (ev.key === 'ArrowDown' ) {
