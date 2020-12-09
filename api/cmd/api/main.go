@@ -21,9 +21,7 @@ type Payload struct {
 func executeCommand(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "application/json")
     w.Header().Set("X-CSRF-TOKEN", csrf.Token(r))
-    if r.Method != http.MethodPost {
-        http.NotFound(w, r)
-    }
+
     var p Payload
     err := json.NewDecoder(r.Body).Decode(&p)
     if err != nil {
@@ -63,7 +61,7 @@ func executeCommand(w http.ResponseWriter, r *http.Request) {
 func main() {
     r := mux.NewRouter()
     staticDir := "/opt/bio/app/static/"
-    r.HandleFunc("/api/v1beta1/cmd", executeCommand)
+    r.HandleFunc("/api/v1beta1/cmd", executeCommand).Methods(http.MethodPost)
     r.PathPrefix("/").Handler(http.FileServer(http.Dir(staticDir)))
     CSRF := csrf.Protect(
         []byte("YRlAtqi8HHvNhiRXBrVCwkhe3ZFcYGsB"),
