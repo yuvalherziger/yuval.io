@@ -14,7 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70cb4d0e-872e-4475-a935-b0057a452865" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bio/cmd/bio/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/bio/cmd/bio/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
