@@ -4,7 +4,6 @@ import (
     "bytes"
     "encoding/json"
     "fmt"
-    "github.com/gorilla/csrf"
     "github.com/gorilla/mux"
     "log"
     "net/http"
@@ -20,7 +19,7 @@ type Payload struct {
 
 func executeCommand(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "application/json")
-    w.Header().Set("X-CSRF-TOKEN", csrf.Token(r))
+    //w.Header().Set("X-CSRF-TOKEN", csrf.Token(r))
 
     var p Payload
     err := json.NewDecoder(r.Body).Decode(&p)
@@ -63,13 +62,13 @@ func main() {
     staticDir := "/opt/bio/app/static/"
     r.HandleFunc("/api/v1beta1/cmd", executeCommand).Methods(http.MethodPost)
     r.PathPrefix("/").Handler(http.FileServer(http.Dir(staticDir)))
-    CSRF := csrf.Protect(
+    /*CSRF := csrf.Protect(
         []byte("YRlAtqi8HHvNhiRXBrVCwkhe3ZFcYGsB"),
         csrf.RequestHeader("X-CSRF-TOKEN"),
         csrf.CookieName("XSRF-TOKEN"),
-    )
+    )*/
 
-    err := http.ListenAndServe(":8090", CSRF(r))
+    err := http.ListenAndServe(":8090", r)
     if err != nil {
         log.Fatal(err)
     }
