@@ -38,6 +38,9 @@ ARG API_PROJECT_PATH=/usr/src/api
 
 WORKDIR ${API_PROJECT_PATH}/
 
+COPY api/go.mod api/go.sum ${API_PROJECT_PATH}/
+RUN go mod download
+
 COPY api/cmd ${API_PROJECT_PATH}/cmd
 
 # Build REST API (2)
@@ -57,7 +60,6 @@ COPY --from=ui-build /ui/dist/bio /opt/bio/app/static/
 ARG CONFIG_PATH=config/
 ARG CONFIG_FILE=config.yaml
 COPY ${CONFIG_PATH}/${CONFIG_FILE} /etc/config/${CONFIG_FILE}
-
 
 USER 10000
 WORKDIR /var/lib/api
