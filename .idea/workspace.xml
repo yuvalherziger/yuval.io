@@ -14,7 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70cb4d0e-872e-4475-a935-b0057a452865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/api/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +92,10 @@
       <screen x="0" y="25" width="1920" height="1125" />
     </state>
     <state x="648" y="327" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1920.1125@0.25.1920.1125" timestamp="1607108772114" />
+    <state x="1036" y="414" key="RollbackChangesDialog" timestamp="1607477136095">
+      <screen x="0" y="25" width="2560" height="1365" />
+    </state>
+    <state x="1036" y="414" key="RollbackChangesDialog/0.25.2560.1365/-2560.25.2560.1415/2560.25.1680.1025@0.25.2560.1365" timestamp="1607477136095" />
     <state x="789" y="343" key="SettingsEditor" timestamp="1606957986895">
       <screen x="0" y="25" width="2560" height="1365" />
     </state>

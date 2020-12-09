@@ -62,9 +62,9 @@ func executeCommand(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     r := mux.NewRouter()
-    fs := http.FileServer(http.Dir("/opt/bio/app/static/"))
-    r.Handle("/", fs)
+    staticDir := "/opt/bio/app/static/"
     r.HandleFunc("/api/v1beta1/cmd", executeCommand)
+    r.PathPrefix("/").Handler(http.FileServer(http.Dir(staticDir)))
     CSRF := csrf.Protect(
         []byte("YRlAtqi8HHvNhiRXBrVCwkhe3ZFcYGsB"),
         csrf.RequestHeader("X-CSRF-TOKEN"),
