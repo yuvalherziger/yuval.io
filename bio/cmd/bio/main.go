@@ -393,8 +393,16 @@ func skills(cmd *cobra.Command, args []string) {
     if err != nil {
         panic(err)
     }
+    real, err := cmd.PersistentFlags().GetBool("real")
+    if err != nil {
+        panic(err)
+    }
     var skills []Skill
-    err = viper.UnmarshalKey("skills", &skills)
+    if real {
+        err = viper.UnmarshalKey("skills", &skills)
+    } else {
+        err = viper.UnmarshalKey("realSkills", &skills)
+    }
     if err != nil {
         panic(err)
     }
@@ -490,6 +498,7 @@ func init() {
         Run:     skills,
     }
     sklFlags := sklCmd.PersistentFlags()
+    sklFlags.Bool("real", false, "Return my real skills")
     sklFlags.Bool("pretty", false, "Return a colorful table")
     sklFlags.Int("view-width", 256, "View width")
     _ = sklFlags.MarkHidden("view-width")

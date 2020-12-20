@@ -108,6 +108,25 @@ openSource:
   - projectName: Katch
     description: A Python library
     source: https://github.com/python-utils/katch
+fakeSkills:
+  - name: Add last-minute items to a release
+    proficiency: 10
+  - name: Spend a day looking for an errant character
+    proficiency: 9
+  - name: Exit vim
+    proficiency: 5
+  - name: Restart my computer regularly
+    proficiency: 2
+  - name: Distinguish between a bug from a feature
+    proficiency: 6
+  - name: Remember to remove frustration-loaded log calls
+    proficiency: 4
+  - name: Run kubectl in the wrong kube context
+    proficiency: 3
+  - name: Roll k8s pods to solve problems
+    proficiency: 9
+  - name: Embrace 'git push -f' as a lifestyle
+    proficiency: 8
 skills:
   - name: Python
     proficiency: 9
