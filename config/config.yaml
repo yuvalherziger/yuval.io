@@ -117,7 +117,7 @@ fakeSkills:
     proficiency: 5
   - name: Restart my computer regularly
     proficiency: 2
-  - name: Distinguish between a bug from a feature
+  - name: Distinguish between a bug and a feature
     proficiency: 6
   - name: Remember to remove frustration-loaded log calls
     proficiency: 4
