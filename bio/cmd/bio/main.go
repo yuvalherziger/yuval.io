@@ -386,6 +386,7 @@ func openProfile(cmd *cobra.Command, args []string) {
 
 func skills(cmd *cobra.Command, args []string) {
     pretty, err := cmd.PersistentFlags().GetBool("pretty")
+    note := ""
     if err != nil {
         panic(err)
     }
@@ -402,6 +403,7 @@ func skills(cmd *cobra.Command, args []string) {
         err = viper.UnmarshalKey("skills", &skills)
     } else {
         err = viper.UnmarshalKey("realSkills", &skills)
+        note = "\n\nJokes aside, run the following to list my actual skills:\n\n\tbio skills --real"
     }
     if err != nil {
         panic(err)
@@ -432,7 +434,7 @@ func skills(cmd *cobra.Command, args []string) {
         }})
     }
     t.Render()
-
+    fmt.Printf(note)
 }
 
 func init() {
