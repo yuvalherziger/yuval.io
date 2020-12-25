@@ -402,7 +402,7 @@ func skills(cmd *cobra.Command, args []string) {
     if real {
         err = viper.UnmarshalKey("skills", &skills)
     } else {
-        err = viper.UnmarshalKey("realSkills", &skills)
+        err = viper.UnmarshalKey("fakeSkills", &skills)
         note = "\n\nJokes aside, run the following to list my actual skills:\n\n\tbio skills --real"
     }
     if err != nil {
